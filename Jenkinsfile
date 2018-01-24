@@ -15,10 +15,10 @@ pipeline {
         }
     }
     post {
-        always {
+        success {
             mail to: 'Kody.Wilson@nordstrom.com',
-                subject: "Attempted Pipeline: ${currentBuild.fullDisplayName}",
-                body: "Build # ${env.BUILD_NUMBER} - Status - ${env.BUILD_STATUS} - url - ${env.BUILD_URL}"
+                subject: "Build Success: ${currentBuild.fullDisplayName}",
+                body: "Pipeline Branch Build # ${currentBuild.fullDisplayName} - url - ${env.BUILD_URL}"
         }
     }
 }
