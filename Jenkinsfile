@@ -6,7 +6,7 @@ pipeline {
                 sh 'ruby --version'
                 sh 'pwd'
                 sh 'ls -la'
-                sh 'echo "Wooooooooohooooooooo!"'
+                sh 'echo "Testing, testing, 1, 2, 3!"'
             }
         }
     }
