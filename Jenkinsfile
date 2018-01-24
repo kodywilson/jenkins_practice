@@ -14,5 +14,12 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            mail to: 'Kody.Wilson@nordstrom.com'
+                subject: "Attempted Pipeline: ${currentBuild.fullDisplayName}",
+                body: "Something happened to ${env.BUILD_URL}"
+        }
+    }
 }
 
