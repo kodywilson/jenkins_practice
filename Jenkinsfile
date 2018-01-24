@@ -18,7 +18,7 @@ pipeline {
         always {
             mail to: 'Kody.Wilson@nordstrom.com',
                 subject: "Attempted Pipeline: ${currentBuild.fullDisplayName}",
-                body: "Something happened to ${env.BUILD_URL}"
+                body: "Build # ${BUILD_NUMBER} - Status - ${BUILD_STATUS} - url - ${env.BUILD_URL}"
         }
     }
 }
